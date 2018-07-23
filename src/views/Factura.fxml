@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<fx:root id="AnchorPane" prefHeight="600.0" prefWidth="900.0" type="AnchorPane" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.FacturaController">
+   <children>
+      <BorderPane layoutY="-14.0" prefHeight="566.0" prefWidth="917.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-17.0" AnchorPane.topAnchor="-14.0">
+         <top>
+            <GridPane maxWidth="-Infinity" prefHeight="140.0" prefWidth="558.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="396.0" minWidth="10.0" prefWidth="94.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="727.0" minWidth="10.0" prefWidth="291.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Ced/RUC:" />
+                  <Label text="Cliente" GridPane.rowIndex="1" />
+                  <Label text="Dirección" GridPane.rowIndex="2" />
+                  <Label text="Teléfono" GridPane.rowIndex="3" />
+                  <TextField fx:id="cedulaField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#ValidateCedula" prefHeight="27.0" prefWidth="190.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="clienteField" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#validateCliente" prefHeight="27.0" prefWidth="378.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="direccionField" onKeyTyped="#validateDireccion" prefHeight="27.0" prefWidth="300.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="telefonoField" maxWidth="-Infinity" onKeyTyped="#validateTelefono" prefHeight="27.0" prefWidth="195.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </GridPane>
+         </top>
+         <right>
+            <GridPane layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="209.0" AnchorPane.topAnchor="20.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="89.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="120.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="246.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="322.0" minHeight="3.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <BorderPane.margin>
+                  <Insets right="25.0" />
+               </BorderPane.margin>
+               <children>
+                  <Label text="Subtotal">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="23.0" prefWidth="82.0" text="Tar 12%" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="IVA 12%" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="\%DSCTO" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="29.0" prefWidth="148.0" text="Total" GridPane.rowIndex="5">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label text="Descuento" GridPane.rowIndex="4">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </right>
+         <center>
+            <SplitPane dividerPositions="0.1691542288557214" maxHeight="-Infinity" maxWidth="-Infinity" orientation="VERTICAL" prefHeight="404.0" prefWidth="676.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="670.0">
+                     <children>
+                        <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="57.0" prefWidth="681.0" AnchorPane.bottomAnchor="15.0">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="44.0" text="Código" />
+                              <Label text="Descripción" GridPane.columnIndex="1" />
+                              <Label text="Cantidad" GridPane.columnIndex="2" />
+                              <Label text="Stock" GridPane.columnIndex="3" />
+                              <HBox prefHeight="26.0" prefWidth="139.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" text="Ingresar" GridPane.columnIndex="4">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button mnemonicParsing="false" text="Eliminar" GridPane.columnIndex="5" />
+                                 </children>
+                              </HBox>
+                              <TextField fx:id="codigoField" maxWidth="-Infinity" onKeyTyped="#validateCodigo" prefHeight="24.0" prefWidth="133.0" GridPane.rowIndex="1" />
+                              <TextField fx:id="descripcionField" maxWidth="-Infinity" onKeyTyped="#validateDescripcion" prefHeight="27.0" prefWidth="303.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="cantField" maxWidth="-Infinity" onKeyTyped="#validateCant" prefHeight="27.0" prefWidth="61.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <TextField fx:id="stockField" maxWidth="-Infinity" onKeyTyped="#validateStock" prefHeight="27.0" prefWidth="57.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                           </children>
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="100.0" minWidth="10.0" prefWidth="52.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="321.0" minWidth="10.0" prefWidth="301.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="221.0" minWidth="10.0" prefWidth="61.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="53.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="205.0" minWidth="9.0" prefWidth="151.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="132.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="301.0" minHeight="10.0" prefHeight="26.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="330.0" prefWidth="672.0">
+                     <children>
+                        <TableView layoutX="-2.0" layoutY="-3.0" prefHeight="344.0" prefWidth="675.0">
+                          <columns>
+                            <TableColumn prefWidth="62.0" text="Código" />
+                            <TableColumn prefWidth="303.0" text="Detalle" />
+                              <TableColumn minWidth="8.0" prefWidth="49.0" text="Cant" />
+                              <TableColumn prefWidth="78.0" text="P. Unitario" />
+                              <TableColumn prefWidth="81.0" text="P.V.P." />
+                              <TableColumn prefWidth="101.0" text="P.Total" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="45.0" prefWidth="682.0" BorderPane.alignment="BOTTOM_LEFT">
+               <children>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" text="Aceptar">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="50.0" right="60.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="35.0" prefWidth="110.0" text="Nueva">
+                     <HBox.margin>
+                        <Insets left="50.0" right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btn_exit" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#exit" prefHeight="35.0" prefWidth="110.0" text="Salir">
+                     <HBox.margin>
+                        <Insets left="75.0" right="50.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+            </HBox>
+         </bottom>
+      </BorderPane>
+      <HBox prefHeight="100.0" prefWidth="200.0" />
+   </children>
+</fx:root>
