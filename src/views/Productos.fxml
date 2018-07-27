@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="productos" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProductosController">
+   <children>
+      <SplitPane dividerPositions="0.4306930693069307" layoutX="-7.0" layoutY="-7.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="510.0" AnchorPane.topAnchor="-7.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="249.0" prefWidth="508.0">
+               <children>
+                  <Label layoutX="11.0" layoutY="20.0" prefHeight="17.0" prefWidth="110.0" text="Código de Barras:" />
+                  <Label layoutX="14.0" layoutY="62.0" text="Nombre:" />
+                  <Label layoutX="12.0" layoutY="103.0" text="Cantidad:" />
+                  <Label layoutX="10.0" layoutY="138.0" text="Categoría:" />
+                  <Label layoutX="11.0" layoutY="181.0" text="Marca:" />
+                  <Label layoutX="8.0" layoutY="220.0" text="Proveedor:" />
+                  <TextField fx:id="cdbField" layoutX="113.0" layoutY="16.0" onKeyTyped="#ValidadoracdbField" />
+                  <TextField fx:id="nombField" layoutX="78.0" layoutY="54.0" onKeyTyped="#nombFieldalidadoranombField" prefHeight="32.0" prefWidth="353.0" />
+                  <TextField fx:id="CantidadField" layoutX="78.0" layoutY="99.0" onKeyTyped="#ValidadoraCantidadField" prefHeight="25.0" prefWidth="64.0" />
+                  <ComboBox layoutX="78.0" layoutY="134.0" prefWidth="150.0" />
+                  <ComboBox layoutX="78.0" layoutY="177.0" prefWidth="150.0" />
+                  <TextField fx:id="ProveedField" layoutX="79.0" layoutY="216.0" onKeyTyped="#ValidadoraProveedField" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="508.0">
+               <children>
+                  <Label layoutX="7.0" layoutY="20.0" text="Costo:" />
+                  <TextField layoutX="47.0" layoutY="16.0" prefHeight="25.0" prefWidth="97.0" />
+                  <CheckBox layoutX="157.0" layoutY="20.0" mnemonicParsing="false" text="IVA" />
+                  <Label layoutX="227.0" layoutY="20.0" text="Costo+ IVA:" />
+                  <TextField layoutX="300.0" layoutY="16.0" prefHeight="25.0" prefWidth="97.0" />
+                  <Label layoutX="8.0" layoutY="60.0" text="\% Ganancia" />
+                  <TextField layoutX="15.0" layoutY="83.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="15.0" layoutY="117.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="15.0" layoutY="155.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="93.0" layoutY="83.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="93.0" layoutY="117.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="93.0" layoutY="155.0" prefHeight="25.0" prefWidth="64.0" />
+                  <Label layoutX="178.0" layoutY="87.0" text="P.V.P:" />
+                  <Label layoutX="176.0" layoutY="121.0" text="P.M.1:" />
+                  <Label layoutX="176.0" layoutY="159.0" text="P.M.2:" />
+                  <TextField layoutX="146.0" layoutY="199.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="224.0" layoutY="199.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="146.0" layoutY="230.0" prefHeight="25.0" prefWidth="64.0" />
+                  <TextField layoutX="224.0" layoutY="230.0" prefHeight="25.0" prefWidth="64.0" />
+                  <Label layoutX="31.0" layoutY="203.0" text="Descuento %:" />
+                  <Label layoutX="31.0" layoutY="234.0" text="P.V.P - Descuento:" />
+                  <Label layoutX="11.0" layoutY="274.0" text="Descripción del producto:" />
+                  <TextField layoutX="158.0" layoutY="267.0" prefHeight="32.0" prefWidth="336.0" />
+                  <Button layoutX="152.0" layoutY="303.0" mnemonicParsing="false" text="Aceptar" />
+                  <Button layoutX="288.0" layoutY="303.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="58.0" text="Salir" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

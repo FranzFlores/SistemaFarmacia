@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.IngresosController">
+   <children>
+      <SplitPane dividerPositions="0.33035714285714285" orientation="VERTICAL" prefHeight="450.0" prefWidth="700.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="698.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="22.0" text="Beneficiario:" />
+                  <TextField fx:id="BenfField" layoutX="93.0" layoutY="18.0" onKeyTyped="#ValidadoraBenfField" prefHeight="25.0" prefWidth="116.0" />
+                  <Label layoutX="302.0" layoutY="22.0" text="Número:" />
+                  <TextField fx:id="ObservField" layoutX="93.0" layoutY="51.0" onKeyTyped="#ValidadoraObservField" prefHeight="44.0" prefWidth="380.0" />
+                  <TextField fx:id="nmrField" layoutX="355.0" layoutY="18.0" onKeyTyped="#ValidadoranmrField" prefHeight="25.0" prefWidth="116.0" />
+                  <Label layoutX="20.0" layoutY="64.0" text="Observación:" />
+                  <Label layoutX="550.0" layoutY="22.0" text="Fecha:" />
+                  <DatePicker fx:id="fechaPicker" layoutX="487.0" layoutY="42.0" onKeyTyped="#ValidadorafechaPicker" />
+                  <Label layoutX="20.0" layoutY="101.0" text="Código de Barras:" />
+                  <Label layoutX="157.0" layoutY="101.0" text="Producto:" />
+                  <Label layoutX="413.0" layoutY="101.0" text="Cantidad:" />
+                  <TextField fx:id="codgField" layoutX="20.0" layoutY="118.0" onKeyTyped="#ValidadoracodgField" prefHeight="25.0" prefWidth="116.0" />
+                  <TextField fx:id="ProductField" layoutX="157.0" layoutY="118.0" onKeyTyped="#ValidadoraProductField" prefHeight="25.0" prefWidth="222.0" />
+                  <TextField fx:id="CantdField" layoutX="413.0" layoutY="118.0" onKeyTyped="#ValidadoraCantdField" prefHeight="25.0" prefWidth="52.0" />
+                  <Button layoutX="498.0" layoutY="118.0" mnemonicParsing="false" text="Ingresar" />
+                  <Button layoutX="574.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Eliminar" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView prefHeight="232.0" prefWidth="698.0">
+                    <columns>
+                      <TableColumn prefWidth="29.0" />
+                      <TableColumn prefWidth="69.0" text="Código" />
+                        <TableColumn prefWidth="224.0" text="Producto" />
+                        <TableColumn prefWidth="61.0" text="Cant" />
+                        <TableColumn prefWidth="57.0" text="P. Unit" />
+                        <TableColumn prefWidth="52.0" text="P. Total" />
+                        <TableColumn minWidth="8.0" prefWidth="56.0" text="P.V.P" />
+                        <TableColumn prefWidth="51.0" text="Dsct" />
+                        <TableColumn prefWidth="116.0" text="P.VP - Dsct" />
+                    </columns>
+                  </TableView>
+                  <Button layoutX="37.0" layoutY="244.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="81.0" text="Guardar" />
+                  <Button layoutX="149.0" layoutY="244.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="81.0" text="Imprimir" />
+                  <Button layoutX="261.0" layoutY="244.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="81.0" text="Salir" />
+                  <Label layoutX="408.0" layoutY="254.0" text="TOTAL $" />
+                  <TextField layoutX="479.0" layoutY="250.0" prefHeight="25.0" prefWidth="52.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

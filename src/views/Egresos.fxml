@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.EgresosController">
+   <children>
+      <SplitPane dividerPositions="0.33035714285714285" layoutX="10.0" layoutY="10.0" orientation="VERTICAL" prefHeight="450.0" prefWidth="700.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="147.0" prefWidth="698.0">
+               <children>
+                  <Label layoutX="22.0" layoutY="22.0" text="Beneficiario:" />
+                  <TextField fx:id="BenefField" layoutX="93.0" layoutY="18.0" onKeyTyped="#ValidadoraBenefField" prefHeight="25.0" prefWidth="116.0" />
+                  <Label layoutX="302.0" layoutY="22.0" text="Número:" />
+                  <TextField fx:id="obserField" layoutX="93.0" layoutY="51.0" onKeyTyped="#ValidadoraobserField" prefHeight="44.0" prefWidth="380.0" />
+                  <TextField fx:id="numField" layoutX="355.0" layoutY="18.0" onKeyTyped="#ValidadoranumField" prefHeight="25.0" prefWidth="116.0" />
+                  <Label layoutX="20.0" layoutY="64.0" text="Observación:" />
+                  <Label layoutX="550.0" layoutY="22.0" text="Fecha:" />
+                  <DatePicker fx:id="DatePicker" layoutX="487.0" layoutY="42.0" onKeyTyped="#ValidadoraDatePicker" />
+                  <Label layoutX="20.0" layoutY="101.0" text="Código de Barras:" />
+                  <Label layoutX="157.0" layoutY="101.0" text="Producto:" />
+                  <Label layoutX="413.0" layoutY="101.0" text="Cantidad:" />
+                  <TextField fx:id="cbField" layoutX="20.0" layoutY="118.0" onKeyTyped="#ValidadoracbField" prefHeight="25.0" prefWidth="116.0" />
+                  <TextField layoutX="157.0" layoutY="118.0" prefHeight="25.0" prefWidth="222.0" />
+                  <TextField fx:id="CantField" layoutX="413.0" layoutY="118.0" onKeyTyped="#ValidadoraCantField" prefHeight="25.0" prefWidth="52.0" />
+                  <Button layoutX="498.0" layoutY="118.0" mnemonicParsing="false" text="Ingresar" />
+                  <Button layoutX="574.0" layoutY="118.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="59.0" text="Eliminar" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TableView prefHeight="232.0" prefWidth="698.0">
+                     <columns>
+                        <TableColumn minWidth="0.0" prefWidth="13.0" />
+                        <TableColumn prefWidth="67.0" text="Código" />
+                        <TableColumn prefWidth="242.0" text="Producto" />
+                        <TableColumn prefWidth="61.0" text="Cant" />
+                        <TableColumn prefWidth="57.0" text="P. Unit" />
+                        <TableColumn prefWidth="52.0" text="P. Total" />
+                        <TableColumn minWidth="8.0" prefWidth="56.0" text="P.V.P" />
+                        <TableColumn prefWidth="51.0" text="Dsct" />
+                        <TableColumn prefWidth="116.0" text="P.VP - Dsct" />
+                     </columns>
+                  </TableView>
+                  <Button layoutX="37.0" layoutY="244.0" mnemonicParsing="false" onKeyTyped="#Validadoraguardar" prefHeight="37.0" prefWidth="81.0" text="Guardar" />
+                  <Button layoutX="149.0" layoutY="244.0" mnemonicParsing="false" onKeyTyped="#Validadoraimprimir" prefHeight="37.0" prefWidth="81.0" text="Imprimir" />
+                  <Button layoutX="261.0" layoutY="244.0" mnemonicParsing="false" onKeyTyped="#Validadorasalida" prefHeight="37.0" prefWidth="81.0" text="Salir" />
+                  <Label layoutX="408.0" layoutY="254.0" text="TOTAL $" />
+                  <TextField layoutX="479.0" layoutY="250.0" onKeyTyped="#Validadoratotal" prefHeight="25.0" prefWidth="52.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
