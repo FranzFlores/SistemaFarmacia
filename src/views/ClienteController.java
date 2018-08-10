@@ -5,6 +5,7 @@
  */
 package views;
 
+import controller.utilities.Validator;
 import java.awt.TextField;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -21,6 +22,8 @@ public class ClienteController implements Initializable {
     /**
      * Initializes the controller class.
      */
+     
+    
     
    /* @FXML
     private TextField Nombre;

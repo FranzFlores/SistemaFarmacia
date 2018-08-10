@@ -16,7 +16,7 @@ import javafx.scene.control.TextField;
  */
 public class Validator {
 
-    public boolean validarCedula(TextField cedula) {
+    public boolean validateCedula(TextField cedula) {
         String ced = cedula.getText();
         boolean cedulaCorrecta = false;
         try {
@@ -64,17 +64,17 @@ public class Validator {
         return cedulaCorrecta;
     }
 
-    public boolean validarCamposNumericos(TextField campo) {
+    public boolean validateNumField(TextField campo) {
         if (((campo.getText().charAt(0) < '0') || campo.getText().charAt(0) > '9')) {
             Toolkit.getDefaultToolkit().beep();
             return false;
         } else {
-            validarCampos(campo);
+            validateStringField(campo);
             return true;
         }
     }
 
-    public boolean validarCampos(TextField campo) {
+    public boolean validateStringField(TextField campo) {
         String mensajeError = "";
 
         if (campo.getText() == null || campo.getText().trim().length() == 0) {

@@ -56,7 +56,6 @@
               </columnConstraints>
               <rowConstraints>
                   <RowConstraints maxHeight="246.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="246.0" minHeight="0.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="322.0" minHeight="3.0" prefHeight="30.0" vgrow="SOMETIMES" />
                   <RowConstraints maxHeight="322.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
@@ -71,37 +70,31 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label prefHeight="23.0" prefWidth="82.0" text="Tar 12%" GridPane.rowIndex="1">
+                  <Label text="IVA 12%" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="IVA 12%" GridPane.rowIndex="2">
+                  <Label text="\%DSCTO" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label text="\%DSCTO" GridPane.rowIndex="3">
-                     <font>
-                        <Font size="18.0" />
-                     </font>
-                  </Label>
-                  <Label prefHeight="29.0" prefWidth="148.0" text="Total" GridPane.rowIndex="5">
+                  <Label prefHeight="29.0" prefWidth="148.0" text="Total" GridPane.rowIndex="4">
                      <font>
                         <Font size="24.0" />
                      </font>
                   </Label>
-                  <Label text="Descuento" GridPane.rowIndex="4">
+                  <Label text="Descuento" GridPane.rowIndex="3">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Label>
                   <TextField GridPane.columnIndex="1" />
+                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
                   <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
                   <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
                   <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
                </children>
             </GridPane>
          </right>

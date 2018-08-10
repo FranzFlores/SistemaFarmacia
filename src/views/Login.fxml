@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.gluonhq.charm.glisten.control.TextField?>
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -13,81 +16,99 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="321.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
+<AnchorPane id="AnchorPane" prefHeight="200.0" prefWidth="400.0" styleClass="LoginFxmlClass" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.LoginController">
    <children>
-      <BorderPane layoutX="-9.0" layoutY="-6.0" prefHeight="329.0" prefWidth="518.0">
-         <top>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="55.0" prefWidth="553.0" text="ACCESO AL SISTEMA" textAlignment="CENTER" BorderPane.alignment="CENTER">
-               <font>
-                  <Font name="Geneva" size="24.0" />
-               </font>
-               <BorderPane.margin>
-                  <Insets top="20.0" />
-               </BorderPane.margin>
-            </Label>
-         </top>
+      <BorderPane styleClass="LoginFxmlClass" stylesheets="@login.css">
          <center>
-            <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="95.0" prefWidth="333.0" BorderPane.alignment="CENTER">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="118.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="215.0" />
-              </columnConstraints>
-              <rowConstraints>
-                <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label prefHeight="17.0" prefWidth="97.0" text="Usuario">
-                     <GridPane.margin>
+            <BorderPane prefHeight="200.0" prefWidth="400.0">
+               <top>
+                  <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="68.0" prefWidth="459.0" styleClass="label-header" text="Bienvenido " textAlignment="CENTER" textFill="#514d4d" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Geneva" size="36.0" />
+                     </font>
+                     <BorderPane.margin>
                         <Insets />
-                     </GridPane.margin>
-                     <font>
-                        <Font name="Geneva" size="17.0" />
-                     </font>
+                     </BorderPane.margin>
                   </Label>
-                  <TextField fx:id="userField" maxHeight="-Infinity" maxWidth="-Infinity" onKeyTyped="#validateUser" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </TextField>
-                  <Label prefHeight="23.0" prefWidth="146.0" text="Contraseña" GridPane.rowIndex="1">
-                     <font>
-                        <Font name="Geneva" size="17.0" />
-                     </font>
-                  </Label>
-                  <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </PasswordField>
-               </children>
-               <BorderPane.margin>
-                  <Insets bottom="40.0" />
-               </BorderPane.margin>
-            </GridPane>
+               </top>
+               <bottom>
+                  <HBox prefHeight="84.0" prefWidth="487.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" text="ACEPTAR">
+                           <font>
+                              <Font name="Geneva" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="60.0" right="30.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exitSystem" prefHeight="40.0" prefWidth="138.0" text="CANCELAR">
+                           <font>
+                              <Font name="Geneva" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="20.0" top="20.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </bottom>
+               <right>
+                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="89.0" prefWidth="270.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.0" minWidth="10.0" prefWidth="118.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="496.0" minWidth="10.0" prefWidth="205.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="49.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="72.0" minHeight="10.0" prefHeight="46.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="92.0" text="Usuario">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <font>
+                              <Font name="Geneva" size="17.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="label-bright" />
+                              <String fx:value="label" />
+                           </styleClass>
+                        </Label>
+                        <TextField fx:id="userField" maxHeight="-Infinity" maxWidth="-Infinity" onKeyTyped="#validateUser" prefHeight="32.0" prefWidth="150.0" GridPane.columnIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <Label prefHeight="31.0" prefWidth="91.0" styleClass="label-bright" text="Contraseña" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="Geneva" size="17.0" />
+                           </font>
+                        </Label>
+                        <PasswordField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="27.0" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="10.0" />
+                           </GridPane.margin>
+                        </PasswordField>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="15.0" left="10.0" />
+                     </BorderPane.margin>
+                  </GridPane>
+               </right>
+               <left>
+                  <ImageView fitHeight="117.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@images/farmacia.jpg" />
+                     </image>
+                     <BorderPane.margin>
+                        <Insets left="15.0" />
+                     </BorderPane.margin>
+                  </ImageView>
+               </left>
+            </BorderPane>
          </center>
-         <bottom>
-            <HBox prefHeight="84.0" prefWidth="492.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" text="ACEPTAR">
-                     <font>
-                        <Font name="Geneva" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="70.0" right="50.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button fx:id="exitBtn" mnemonicParsing="false" onAction="#exitSystem" prefHeight="40.0" prefWidth="150.0" text="CANCELAR">
-                     <font>
-                        <Font name="Geneva" size="18.0" />
-                     </font>
-                     <HBox.margin>
-                        <Insets left="50.0" />
-                     </HBox.margin>
-                  </Button>
-               </children>
-            </HBox>
-         </bottom>
       </BorderPane>
    </children>
 </AnchorPane>

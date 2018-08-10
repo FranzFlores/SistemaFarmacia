@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="productos" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProductosController">
+<AnchorPane id="productos" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="views.ProductosController">
    <children>
       <SplitPane dividerPositions="0.4306930693069307" layoutX="-7.0" layoutY="-7.0" orientation="VERTICAL" prefHeight="608.0" prefWidth="510.0" AnchorPane.topAnchor="-7.0">
         <items>
@@ -19,7 +20,7 @@
                   <Label layoutX="10.0" layoutY="138.0" text="Categoría:" />
                   <Label layoutX="11.0" layoutY="181.0" text="Marca:" />
                   <Label layoutX="8.0" layoutY="220.0" text="Proveedor:" />
-                  <TextField fx:id="cdbField" layoutX="113.0" layoutY="16.0" onKeyTyped="#ValidadoracdbField" />
+                  <TextField fx:id="cdbField" layoutX="145.0" layoutY="15.0" onKeyTyped="#ValidadoracdbField" />
                   <TextField fx:id="nombField" layoutX="78.0" layoutY="54.0" onKeyTyped="#nombFieldalidadoranombField" prefHeight="32.0" prefWidth="353.0" />
                   <TextField fx:id="CantidadField" layoutX="78.0" layoutY="99.0" onKeyTyped="#ValidadoraCantidadField" prefHeight="25.0" prefWidth="64.0" />
                   <ComboBox layoutX="78.0" layoutY="134.0" prefWidth="150.0" />

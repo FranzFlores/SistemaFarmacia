@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import controller.utilities.Validator;
+import javafx.scene.image.ImageView;
 
 /**
  * FXML Controller class
@@ -34,9 +35,14 @@ public class LoginController implements Initializable {
     }
     
     public void validateUser(){
-        validate.validarCampos(userField);
-        
-        
+        validate.validarCampos(userField);    
     }
+    
+    
+    
+    
+    
+    
+    
     
 }
